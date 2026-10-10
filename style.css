@@ -104,7 +104,10 @@ nav a { padding: 8px 0; color: #c8c6d0; }
   cursor: pointer;
 }
 
-.menu-toggle { display: grid; place-items: center; }
+.menu-toggle {
+  display: grid;
+  place-items: center;
+}
 
 .avatar {
   background: linear-gradient(135deg, var(--purple), var(--pink));
@@ -629,6 +632,10 @@ footer .brand { color: var(--text); }
    PHONE (max 599px)
    ===================================================== */
 @media (max-width: 599px) {
+  /* Header: [menu] [logo] ........ [search] [avatar] */
+  .menu-toggle { order: -1; }
+  .brand { margin-right: auto; }
+
   .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 
   .table-wrap { display: none; }
